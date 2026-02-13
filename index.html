@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pudathu Rama Krishna | AI/ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND ANIMATION LAYER -->
+    <div id="bg-layer">
+        <canvas id="neuralCanvas"></canvas>
+    </div>
+
+    <div id="page-content">
+        <main id="hero-root">
+
+            <section class="hero">
+                <div class="hero-grid">
+
+                    <!-- LEFT: Glass Card with Text -->
+                    <div class="hero-card hero-glass-card" id="heroCard">
+                        <div class="hero-card-inner">
+
+                            <div class="hero-name anim-tracking" data-delay="800">
+                                PUDATHU RAMA KRISHNA
+                            </div>
+
+                            <h1 class="hero-headline">
+                                <span class="word-reveal" data-delay="1100">Building</span>
+                                <span class="word-reveal" data-delay="1280">Intelligent</span>
+                                <span class="word-reveal" data-delay="1460">AI</span>
+                                <span class="word-reveal" data-delay="1640">Systems</span>
+                                <br>
+                                <span class="word-reveal" data-delay="1820">That</span>
+                                <span class="word-reveal" data-delay="2000">Think</span>
+                                <span class="word-reveal" data-delay="2180">&amp;</span>
+                                <span class="word-reveal" data-delay="2360">Reason.</span>
+                            </h1>
+
+                            <div class="hero-role anim-mask" data-delay="2500">
+                                <span>AI/ML Engineer — LLM Fine-Tuning — Applied Machine Learning</span>
+                            </div>
+
+                            <p class="hero-quote anim-fade" data-delay="2900">
+                                "Reasoning emerges from structured data and engineered models."
+                            </p>
+
+                            <div class="hero-buttons">
+                                <a href="#projects" class="btn btn-primary anim-slide" data-delay="3300">
+                                    <span class="btn-text">View Projects</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                                <a href="#research-models" class="btn btn-secondary anim-slide" data-delay="3500">
+                                    <span class="btn-text">Research & Models</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: ML Visual -->
+                    <div class="hero-visual" id="heroVisual">
+                        <canvas id="chartCanvas"></canvas>
+                        <svg class="chart-overlay" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+                            <line x1="40" y1="20" x2="40" y2="260" stroke="rgba(94,231,255,0.15)" stroke-width="1" />
+                            <line x1="40" y1="260" x2="380" y2="260" stroke="rgba(94,231,255,0.15)" stroke-width="1" />
+                            <line x1="40" y1="80" x2="380" y2="80" stroke="rgba(94,231,255,0.06)" stroke-width="0.5"
+                                stroke-dasharray="4,6" />
+                            <line x1="40" y1="140" x2="380" y2="140" stroke="rgba(94,231,255,0.06)" stroke-width="0.5"
+                                stroke-dasharray="4,6" />
+                            <line x1="40" y1="200" x2="380" y2="200" stroke="rgba(94,231,255,0.06)" stroke-width="0.5"
+                                stroke-dasharray="4,6" />
+                            <path id="chartLine" class="chart-draw"
+                                d="M40,240 C80,230 110,210 140,180 S200,100 240,90 S310,60 360,30" fill="none"
+                                stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" />
+                            <path id="chartFill" class="chart-draw-fill"
+                                d="M40,240 C80,230 110,210 140,180 S200,100 240,90 S310,60 360,30 L360,260 L40,260 Z"
+                                fill="url(#fillGrad)" />
+                            <circle class="data-dot" cx="140" cy="180" r="4" data-delay="4000" />
+                            <circle class="data-dot" cx="240" cy="90" r="4" data-delay="4200" />
+                            <circle class="data-dot" cx="360" cy="30" r="5" data-delay="4400" />
+                            <text x="135" y="172" class="chart-label" data-delay="4050">Fine-Tuning</text>
+                            <text x="228" y="82" class="chart-label" data-delay="4250">Reasoning</text>
+                            <text x="335" y="22" class="chart-label" data-delay="4450">Production</text>
+                            <defs>
+                                <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#6c8cff" />
+                                    <stop offset="100%" stop-color="#5ee7ff" />
+                                </linearGradient>
+                                <linearGradient id="fillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="rgba(94,231,255,0.15)" />
+                                    <stop offset="100%" stop-color="rgba(94,231,255,0)" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ═══ ML PIPELINE FLOW SECTION ═══ -->
+            <section class="pipeline-section" id="capabilities">
+                <!-- Global BG Wash for readability -->
+                <div class="pipeline-wash"></div>
+
+                <div class="pipeline-container">
+
+                    <div class="pipeline-header">
+                        <h2 class="pipe-title">End-to-End ML Architecture</h2>
+                        <p class="pipe-subtitle">Intelligent Flow System</p>
+                    </div>
+
+                    <!-- SVG Connections: 1200px wide, Zig-Zag -->
+                    <svg class="pipeline-lines" viewBox="0 0 1200 400" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#5ee7ff" />
+                                <stop offset="50%" stop-color="#6c8cff" />
+                                <stop offset="100%" stop-color="#5ee7ff" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- 1(100,100) -> 2(300,300) -->
+                        <path class="pipe-conn" d="M100,100 C200,100 200,300 300,300" />
+                        <!-- 2(300,300) -> 3(500,100) -->
+                        <path class="pipe-conn" d="M300,300 C400,300 400,100 500,100" />
+                        <!-- 3(500,100) -> 4(700,300) -->
+                        <path class="pipe-conn" d="M500,100 C600,100 600,300 700,300" />
+                        <!-- 4(700,300) -> 5(900,100) -->
+                        <path class="pipe-conn" d="M700,300 C800,300 800,100 900,100" />
+                        <!-- 5(900,100) -> 6(1100,300) -->
+                        <path class="pipe-conn" d="M900,100 C1000,100 1000,300 1100,300" />
+                    </svg>
+
+                    <div class="pipeline-grid">
+
+                        <!-- 1. Data Engineering (Top) -->
+                        <div class="pipe-card pipe-top" data-index="0">
+                            <div class="cap-accent"></div>
+                            <div class="cap-icon"><svg viewBox="0 0 48 48" fill="none">
+                                    <rect class="icon-anim" x="8" y="18" width="12" height="22" rx="3" stroke="#5ee7ff"
+                                        stroke-width="1.8" fill="none" />
+                                    <rect class="icon-anim" x="28" y="10" width="12" height="30" rx="3" stroke="#6c8cff"
+                                        stroke-width="1.8" fill="none" />
+                                    <path d="M20 28 L28 22" stroke="#5ee7ff" stroke-width="1.5"
+                                        stroke-dasharray="3,3" />
+                                </svg></div>
+                            <div class="pipe-content">
+                                <h3>Data Engineering</h3>
+                                <p>Feature stores &amp; curation</p>
+                            </div>
+                        </div>
+
+                        <!-- 2. ML Pipelines (Bottom) -->
+                        <div class="pipe-card pipe-bottom" data-index="1">
+                            <div class="cap-accent"></div>
+                            <div class="cap-icon"><svg viewBox="0 0 48 48" fill="none">
+                                    <path class="icon-anim" d="M6 32 L14 32 L14 24 L22 24 L22 16 L30 16 L30 8 L38 8"
+                                        stroke="#6c8cff" stroke-width="2" />
+                                    <circle cx="14" cy="32" r="2" fill="#5ee7ff" />
+                                    <circle cx="30" cy="16" r="2" fill="#5ee7ff" />
+                                </svg></div>
+                            <div class="pipe-content">
+                                <h3>ML Pipelines</h3>
+                                <p>Training &amp; tracking</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. LLM Fine-Tuning (Top) -->
+                        <div class="pipe-card pipe-top" data-index="2">
+                            <div class="cap-accent"></div>
+                            <div class="cap-icon"><svg viewBox="0 0 48 48" fill="none">
+                                    <path class="icon-anim" d="M8 36 L16 20 L24 28 L32 12 L40 18" stroke="#5ee7ff"
+                                        stroke-width="2.5" />
+                                    <circle cx="16" cy="20" r="3" fill="#6c8cff" opacity="0.6" />
+                                    <circle cx="32" cy="12" r="3" fill="#6c8cff" opacity="0.6" />
+                                </svg></div>
+                            <div class="pipe-content">
+                                <h3>LLM Fine-Tuning</h3>
+                                <p>LoRA &amp; instruction tuning</p>
+                            </div>
+                        </div>
+
+                        <!-- 4. Reasoning Systems (Bottom) -->
+                        <div class="pipe-card pipe-bottom" data-index="3">
+                            <div class="cap-accent"></div>
+                            <div class="cap-icon"><svg viewBox="0 0 48 48" fill="none">
+                                    <circle class="icon-anim" cx="24" cy="24" r="10" stroke="#6c8cff"
+                                        stroke-width="2" />
+                                    <path d="M24 14V8 M24 40V34 M14 24H8 M40 24H34" stroke="#5ee7ff"
+                                        stroke-width="1.5" />
+                                </svg></div>
+                            <div class="pipe-content">
+                                <h3>Reasoning Systems</h3>
+                                <p>Chain-of-thought architecture</p>
+                            </div>
+                        </div>
+
+                        <!-- 5. Model Deployment (Top) -->
+                        <div class="pipe-card pipe-top" data-index="4">
+                            <div class="cap-accent"></div>
+                            <div class="cap-icon"><svg viewBox="0 0 48 48" fill="none">
+                                    <path class="icon-anim" d="M12 38 L12 28 L24 20 L36 28 L36 38" stroke="#5ee7ff"
+                                        stroke-width="2" />
+                                    <circle cx="24" cy="14" r="4" stroke="#6c8cff" stroke-width="2" />
+                                </svg></div>
+                            <div class="pipe-content">
+                                <h3>Model Deployment</h3>
+                                <p>Production API serving</p>
+                            </div>
+                        </div>
+
+                        <!-- 6. AI Interfaces (Bottom) -->
+                        <div class="pipe-card pipe-bottom" data-index="5">
+                            <div class="cap-accent"></div>
+                            <div class="cap-icon"><svg viewBox="0 0 48 48" fill="none">
+                                    <rect class="icon-anim" x="6" y="10" width="36" height="24" rx="4" stroke="#6c8cff"
+                                        stroke-width="2" />
+                                    <path d="M14 20 L20 26 L34 18" stroke="#5ee7ff" stroke-width="2" />
+                                </svg></div>
+                            <div class="pipe-content">
+                                <h3>AI Interfaces</h3>
+                                <p>Real-time conversational UI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══ CINEMATIC PROJECT SHOWCASE ═══ -->
+            <section id="research-models" class="project-section">
+
+                <!-- PROJECT 1: REASONING AI -->
+                <div class="project-panel" id="proj-reasoning">
+                    <div class="panel-wash"></div>
+                    <div class="panel-grid">
+
+                        <!-- Left: Text -->
+                        <div class="panel-content">
+                            <h2 class="proj-title">Reasoning AI — Fine-Tuned LLM</h2>
+                            <p class="proj-impact">Instruction-trained reasoning model with structured QA behavior</p>
+
+                            <ul class="proj-bullets">
+                                <li>Instruction dataset engineering</li>
+                                <li>LoRA fine-tuning pipeline</li>
+                                <li>Reasoning QA training</li>
+                                <li>HuggingFace model deployment</li>
+                            </ul>
+
+                            <div class="proj-chips">
+                                <span>Transformers</span> <span>PyTorch</span> <span>LoRA</span>
+                                <span>HuggingFace</span>
+                            </div>
+
+                            <div class="proj-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <span class="btn-text">View Model</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <span class="btn-text">View Method</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Visual (Hybrid Graph) -->
+                        <div class="panel-visual">
+                            <div class="visual-bg-wash"></div>
+                            <div class="visual-card reasoning-card">
+
+                                <!-- LAYER 1: SVG Paths -->
+                                <svg class="reasoning-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMid meet">
+                                    <defs>
+                                        <linearGradient id="activePathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#5ee7ff" stop-opacity="0.8" />
+                                            <stop offset="100%" stop-color="#6c8cff" stop-opacity="1" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <!-- Inactive Branch -->
+                                    <path class="reason-path inactive"
+                                        d="M90,160 C140,160 140,240 190,240 L310,240 C360,240 360,160 410,160" />
+
+                                    <!-- Active Branch -->
+                                    <path class="reason-path active-path"
+                                        d="M90,160 C140,160 140,80 190,80 L310,80 C360,80 360,160 410,160" />
+
+                                    <!-- Animated Pulse -->
+                                    <circle class="packet-dot" cx="0" cy="0" r="3" fill="#fff">
+                                        <animateMotion repeatCount="indefinite" dur="4s" keyPoints="0;1" keyTimes="0;1"
+                                            calcMode="linear">
+                                            <mpath href="#activePathMotion" />
+                                        </animateMotion>
+                                    </circle>
+                                    <path id="activePathMotion"
+                                        d="M90,160 C140,160 140,80 190,80 L310,80 C360,80 360,160 410,160" fill="none"
+                                        class="hidden-motion-path" />
+                                </svg>
+
+                                <!-- LAYER 2: HTML Overlay Nodes -->
+                                <div class="nodes-layer">
+                                    <!-- Input (18%, 50%) -->
+                                    <div class="glass-node r-node"
+                                        style="top: 50%; left: 18%; transition-delay: 0.5s; animation-delay: 0.5s;">
+                                        <div class="node-icon">?</div>
+                                        <div class="node-text">
+                                            <span class="node-title">Input</span>
+                                            <span class="node-sub">User query</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 1 (38%, 25%) -->
+                                    <div class="glass-node r-node active"
+                                        style="top: 25%; left: 38%; transition-delay: 1.0s; animation-delay: 1.0s;">
+                                        <div class="node-icon">1</div>
+                                        <div class="node-text">
+                                            <span class="node-title">Step 1</span>
+                                            <span class="node-sub">Decompose</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Context (38%, 75%) -->
+                                    <div class="glass-node r-node dim"
+                                        style="top: 75%; left: 38%; transition-delay: 1.2s; animation-delay: 1.2s;">
+                                        <div class="node-icon">C</div>
+                                        <div class="node-text">
+                                            <span class="node-title">Context</span>
+                                            <span class="node-sub">Retrieval</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Inference (62%, 25%) -->
+                                    <div class="glass-node r-node active"
+                                        style="top: 25%; left: 62%; transition-delay: 1.5s; animation-delay: 1.5s;">
+                                        <div class="node-icon">⚡</div>
+                                        <div class="node-text">
+                                            <span class="node-title">Inference</span>
+                                            <span class="node-sub">Reasoning</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Evidence (62%, 75%) -->
+                                    <div class="glass-node r-node dim"
+                                        style="top: 75%; left: 62%; transition-delay: 1.7s; animation-delay: 1.7s;">
+                                        <div class="node-icon">E</div>
+                                        <div class="node-text">
+                                            <span class="node-title">Evidence</span>
+                                            <span class="node-sub">Signals</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Final Answer (82%, 50%) - Badge Style -->
+                                    <div class="glass-node r-node final-badge"
+                                        style="top: 50%; left: 82%; transition-delay: 2.2s; animation-delay: 2.2s;">
+                                        <div class="node-text">
+                                            <span class="node-title">Final Answer</span>
+                                            <span class="node-sub">Model Output</span>
+                                        </div>
+                                        <div class="steady-glow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: CREDITWISE -->
+                <div class="project-panel" id="proj-credit">
+                    <div class="panel-wash"></div>
+                    <div class="panel-grid reverse">
+
+                        <!-- Slot 1: Text (Right) -->
+                        <div class="panel-content">
+                            <h2 class="proj-title">CreditWise — Loan Prediction ML</h2>
+                            <p class="proj-impact">End-to-end ML decision support system with high accuracy</p>
+
+                            <ul class="proj-bullets">
+                                <li>Feature engineering pipeline</li>
+                                <li>Model training &amp; validation</li>
+                                <li>Evaluation metrics framework</li>
+                                <li>95% prediction accuracy</li>
+                            </ul>
+
+                            <div class="proj-chips">
+                                <span>Scikit-learn</span> <span>Pandas</span> <span>ML Pipeline</span>
+                                <span>Evaluation</span>
+                            </div>
+
+                            <div class="proj-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <span class="btn-text">View Pipeline</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <span class="btn-text">View Code</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slot 2: Visual (Left) -->
+                        <div class="panel-visual">
+                            <div class="visual-bg-wash"></div>
+                            <div class="visual-dashboard">
+
+                                <!-- Top Row -->
+                                <div class="dash-row">
+                                    <!-- ROC Curve -->
+                                    <div class="dash-panel glass-mini roc-panel">
+                                        <div class="tooltip">Performance Curve</div>
+                                        <div class="dash-header">ROC Curve</div>
+                                        <svg class="roc-svg" viewBox="0 0 140 100">
+                                            <line x1="20" y1="90" x2="130" y2="90" stroke="rgba(255,255,255,0.1)"
+                                                stroke-width="1" />
+                                            <line x1="20" y1="10" x2="20" y2="90" stroke="rgba(255,255,255,0.1)"
+                                                stroke-width="1" />
+                                            <text x="20" y="98" class="chart-axis-label">FPR</text>
+                                            <text x="5" y="50" class="chart-axis-label"
+                                                transform="rotate(-90 5,50)">TPR</text>
+                                            <path class="roc-line" d="M20,90 C50,85 40,30 130,10" fill="none"
+                                                stroke="#5ee7ff" stroke-width="2" />
+                                            <area class="roc-area" d="M20,90 C50,85 40,30 130,10 L130,90 L20,90 Z"
+                                                fill="rgba(94,231,255,0.1)" />
+                                        </svg>
+                                    </div>
+
+                                    <!-- Confusion Matrix -->
+                                    <div class="dash-panel glass-mini matrix-panel">
+                                        <div class="tooltip">Prediction Accuracy</div>
+                                        <div class="dash-header">Confusion</div>
+                                        <div class="matrix-grid">
+                                            <div class="mat-cell tp anim-fade" data-delay="100">
+                                                <span class="mat-corner">TP</span><span>920</span>
+                                            </div>
+                                            <div class="mat-cell fp anim-fade" data-delay="200">
+                                                <span class="mat-corner">FP</span><span>45</span>
+                                            </div>
+                                            <div class="mat-cell fn anim-fade" data-delay="300">
+                                                <span class="mat-corner">FN</span><span>30</span>
+                                            </div>
+                                            <div class="mat-cell tn anim-fade" data-delay="400">
+                                                <span class="mat-corner">TN</span><span>890</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Row -->
+                                <div class="dash-row">
+                                    <!-- Feature Importance -->
+                                    <div class="dash-panel glass-mini feat-panel">
+                                        <div class="tooltip">Key Logic Drivers</div>
+                                        <div class="dash-header">Impact Features</div>
+                                        <div class="feat-ba-container">
+                                            <div class="feat-row">
+                                                <span class="feat-label">Credit</span>
+                                                <div class="feat-bar-track">
+                                                    <div class="feat-bar-fill" style="--w: 85%"></div>
+                                                </div>
+                                                <span class="feat-pct">85%</span>
+                                            </div>
+                                            <div class="feat-row">
+                                                <span class="feat-label">Income</span>
+                                                <div class="feat-bar-track">
+                                                    <div class="feat-bar-fill" style="--w: 65%"></div>
+                                                </div>
+                                                <span class="feat-pct">65%</span>
+                                            </div>
+                                            <div class="feat-row">
+                                                <span class="feat-label">Age</span>
+                                                <div class="feat-bar-track">
+                                                    <div class="feat-bar-fill" style="--w: 45%"></div>
+                                                </div>
+                                                <span class="feat-pct">45%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Metrics Gauge -->
+                                    <div class="dash-panel glass-mini stat-panel">
+                                        <div class="tooltip">Ranking Quality</div>
+                                        <div class="stat-circle">
+                                            <svg viewBox="0 0 36 36" class="gauge-svg">
+                                                <path class="gauge-bg"
+                                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                    fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3" />
+                                                <path class="gauge-fill" stroke-dasharray="94, 100"
+                                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                    fill="none" stroke="#5ee7ff" stroke-width="3" />
+                                            </svg>
+                                            <div class="stat-value counter-anim" data-target="95">0%</div>
+                                            <div class="stat-label">AUC</div>
+                                        </div>
+                                        <div class="stat-sub">Discrimination Score</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ════ SCREEN FOUR: CREDENTIALS COMMAND CENTER ════ -->
+            <section id="credentials" class="cred-section">
+                <div class="cred-wash"></div>
+
+                <div class="cred-container">
+
+                    <div class="cred-header">
+                        <h2 class="cred-title">Experience &amp; Credentials</h2>
+                        <p class="cred-subtitle">Validated training, certifications, and technical stack</p>
+                    </div>
+
+                    <div class="cred-grid">
+
+                        <!-- Panel 1: Experience -->
+                        <div class="cred-panel glass-panel" style="--delay: 0.1s">
+                            <div class="panel-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#5ee7ff"
+                                    stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg></div>
+                            <h3 class="panel-title">Experience</h3>
+
+                            <div class="exp-list">
+                                <div class="exp-row">
+                                    <div class="tick-icon"><svg viewBox="0 0 24 24">
+                                            <path class="tick-path" d="M5 12l5 5l10 -10" fill="none" stroke="#5ee7ff"
+                                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></div>
+                                    <span class="exp-text">AI/ML Project Systems Built</span>
+                                    <span class="exp-status">Verified</span>
+                                </div>
+                                <div class="exp-row">
+                                    <div class="tick-icon"><svg viewBox="0 0 24 24">
+                                            <path class="tick-path" d="M5 12l5 5l10 -10" fill="none" stroke="#5ee7ff"
+                                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></div>
+                                    <span class="exp-text">LLM Fine-Tuning &amp; Reasoning</span>
+                                    <span class="exp-status">Verified</span>
+                                </div>
+                                <div class="exp-row">
+                                    <div class="tick-icon"><svg viewBox="0 0 24 24">
+                                            <path class="tick-path" d="M5 12l5 5l10 -10" fill="none" stroke="#5ee7ff"
+                                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></div>
+                                    <span class="exp-text">End-to-End ML Pipelines</span>
+                                    <span class="exp-status">Verified</span>
+                                </div>
+                                <div class="exp-row">
+                                    <div class="tick-icon"><svg viewBox="0 0 24 24">
+                                            <path class="tick-path" d="M5 12l5 5l10 -10" fill="none" stroke="#5ee7ff"
+                                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></div>
+                                    <span class="exp-text">Model Evaluation &amp; Deployment</span>
+                                    <span class="exp-status">Verified</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: Certifications -->
+                        <div class="cred-panel glass-panel" style="--delay: 0.2s">
+                            <div class="cert-ribbon">Certified</div>
+                            <div class="panel-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#5ee7ff"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"></path>
+                                </svg></div>
+                            <h3 class="panel-title">Certifications</h3>
+
+                            <div class="cert-grid">
+                                <div class="cert-pill">
+                                    <span class="cert-icon">🏆</span>
+                                    <span>AI / ML Certification</span>
+                                </div>
+                                <div class="cert-pill">
+                                    <span class="cert-icon">🎓</span>
+                                    <span>Deep Learning</span>
+                                </div>
+                                <div class="cert-pill">
+                                    <span class="cert-icon">⚡</span>
+                                    <span>NLP &amp; LLM</span>
+                                </div>
+                                <div class="cert-pill">
+                                    <span class="cert-icon">📊</span>
+                                    <span>Model Evaluation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 3: Tech Stack -->
+                        <div class="cred-panel glass-panel" style="--delay: 0.3s">
+                            <div class="panel-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#5ee7ff"
+                                    stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg></div>
+                            <h3 class="panel-title">Core Tech Stack</h3>
+
+                            <div class="stack-grid">
+                                <div class="tech-chip" style="--i:1"><span class="dot"></span>Python</div>
+                                <div class="tech-chip" style="--i:2"><span class="dot"></span>PyTorch</div>
+                                <div class="tech-chip" style="--i:3"><span class="dot"></span>Transformers</div>
+                                <div class="tech-chip" style="--i:4"><span class="dot"></span>LoRA</div>
+                                <div class="tech-chip" style="--i:5"><span class="dot"></span>Scikit-learn</div>
+                                <div class="tech-chip" style="--i:6"><span class="dot"></span>Pandas</div>
+                                <div class="tech-chip" style="--i:7"><span class="dot"></span>HuggingFace</div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 4: Tools -->
+                        <div class="cred-panel glass-panel" style="--delay: 0.4s">
+                            <div class="panel-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#5ee7ff"
+                                    stroke-width="2">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg></div>
+                            <h3 class="panel-title">Tools &amp; Platforms</h3>
+
+                            <div class="tool-list">
+                                <div class="tool-row">
+                                    <span class="tool-icon">🧪</span>
+                                    <span class="tool-name">Model Training</span>
+                                    <div class="tool-status"><span class="pulse-dot"></span>Active</div>
+                                </div>
+                                <div class="tool-row">
+                                    <span class="tool-icon">📊</span>
+                                    <span class="tool-name">Evaluation</span>
+                                    <div class="tool-status"><span class="pulse-dot"></span>Advanced</div>
+                                </div>
+                                <div class="tool-row">
+                                    <span class="tool-icon">🧠</span>
+                                    <span class="tool-name">LLM Tooling</span>
+                                    <div class="tool-status"><span class="pulse-dot"></span>Specialized</div>
+                                </div>
+                                <div class="tool-row">
+                                    <span class="tool-icon">🚀</span>
+                                    <span class="tool-name">Deployment</span>
+                                    <div class="tool-status"><span class="pulse-dot"></span>Capable</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ════ FINAL SCREEN: CONTACT & CTA ════ -->
+            <section id="contact" class="contact-section">
+                <div class="contact-vignette"></div>
+                <div class="contact-glow"></div>
+
+                <div class="glass-master-panel">
+                    <div class="contact-content">
+
+                        <div class="avail-badge">
+                            <span class="status-dot"></span>
+                            <span>Available for Opportunities</span>
+                        </div>
+
+                        <h2 class="contact-title">Let’s Build Intelligent<br>Systems Together</h2>
+
+                        <p class="contact-sub">Open to AI / ML Engineering Roles &amp; Research Collaborations</p>
+
+                        <div class="contact-grid">
+                            <a href="mailto:YOUR_EMAIL@example.com" class="contact-btn magnetic-btn">
+                                <span class="btn-icon">✉️</span>
+                                <span class="btn-label">Email</span>
+                            </a>
+                            <a href="https://huggingface.co/YOUR_USERNAME" target="_blank" rel="noopener"
+                                class="contact-btn magnetic-btn">
+                                <span class="btn-icon">🤗</span>
+                                <span class="btn-label">HuggingFace</span>
+                            </a>
+                            <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener"
+                                class="contact-btn magnetic-btn">
+                                <span class="btn-icon">🐙</span>
+                                <span class="btn-label">GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener"
+                                class="contact-btn magnetic-btn">
+                                <span class="btn-icon">💼</span>
+                                <span class="btn-label">LinkedIn</span>
+                            </a>
+                        </div>
+
+                        <div class="resume-wrapper">
+                            <a href="Commercial_RESUME.pdf" download class="resume-btn magnetic-btn">
+                                <span class="btn-shine"></span>
+                                <span>Download Resume</span>
+                            </a>
+                        </div>
+
+                        <div class="closing-quote">
+                            “Intelligence is engineered — not guessed.”
+                        </div>
+
+                    </div>
+                </div>
+
+                <footer class="mini-footer">
+                    <p>&copy; 2026 AI Engineer Portfolio. All Systems Nominal.</p>
+                </footer>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
