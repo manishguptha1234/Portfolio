@@ -1,0 +1,22 @@
+name: isoklo
+
+on:
+  pull_request: # never pull_request_target: the gate reads untrusted code, so it gets no secrets
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history: Isoklo compares the pull request with where it left the base branch
+          persist-credentials: false
+
+      - uses: isoklo/isoklo@v0
+        with:
+          # Optional: a maintainer adds the "isoklo-allow-config" label to accept a deliberate config change.
+          allow-config-change: ${{ contains(github.event.pull_request.labels.*.name, 'isoklo-allow-config') && 'label isoklo-allow-config applied by a maintainer' || '' }}
